@@ -5,8 +5,10 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
+const cors = require('cors');
 const port = 4000;
 
+app.use(cors())
 app.use(express.json());
 
 app.get('/api/test', (req, res) => {
